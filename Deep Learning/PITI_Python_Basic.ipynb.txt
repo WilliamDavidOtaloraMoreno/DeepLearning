@@ -1,0 +1,219 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "PITI_Python_Basic.ipynb",
+      "provenance": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Description:\n",
+        "\n",
+        "---\n",
+        "\n",
+        "* @Author: William David Otálora Moreno\n",
+        "* @Date:2022/02/12\n",
+        "* @Description: This notebook python show basic simple exercises python"
+      ],
+      "metadata": {
+        "id": "3zJgQKapyj3n"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#- Ejercicio Basicos\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ZBEPfUX-0Bl9"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Ejercicio 1: Productos + IVA"
+      ],
+      "metadata": {
+        "id": "WuHC_FIt3vcY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZOcThqgMx355",
+        "outputId": "23e1490a-aa82-481a-938e-410ac590249d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "input 1° product: 1\n",
+            "input 2° product: 2\n",
+            "input 3° product: 3\n",
+            "input 4° product: 4\n",
+            "input 5° product: 5\n",
+            "Valor bruto: 15 \n",
+            "Iva:  2.85 \n",
+            "TOTAL 17.85\n"
+          ]
+        }
+      ],
+      "source": [
+        "prod1= int(input(\"input 1° product: \"))\n",
+        "prod2= int(input(\"input 2° product: \"))\n",
+        "prod3= int(input(\"input 3° product: \"))\n",
+        "prod4= int(input(\"input 4° product: \"))\n",
+        "prod5= int(input(\"input 5° product: \"))\n",
+        "suma = (prod1+prod2+prod3+prod4+prod5)\n",
+        "iva = suma*0.19\n",
+        "total = suma+iva\n",
+        "print(\"Valor bruto:\" ,suma, \"\\nIva: \" ,iva, \"\\nTOTAL\",total)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Version Python\n"
+      ],
+      "metadata": {
+        "id": "cCUdI3-L3zrw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "prod1,prod2,prod3,prod4,prod5 =input(\"input 1°,2°,3°,4°,5° product with, separate\").split(\",\")\n",
+        "suma = int(prod1) + int(prod2) + int(prod3) + int(prod4)+  int(prod5)\n",
+        "print(\"Valor bruto: \" +str(suma) + \" \\nIva: \" + str(suma*0.19) +\" \\nTOTAL \" + str(suma+(suma*0.19)))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e4mkuVND36Xh",
+        "outputId": "804fb103-d2e9-45e7-aff1-8bc4cb8e6b16"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "input 1°,2°,3°,4°,5° product with, separate2,2,2,2,2\n",
+            "Valor bruto: 10 \n",
+            "Iva: 1.9 \n",
+            "TOTAL 11.9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Ejercicio 2: Numeros aleatorios"
+      ],
+      "metadata": {
+        "id": "8gEQl3nG6JAU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1= int(input(\"input 1° num: \"))\n",
+        "num2= int(input(\"input 2° num: \"))\n",
+        "num3= int(input(\"input 3° num: \"))\n",
+        "prom = (num1+num2+num3) / 3\n",
+        "if num1 > num2 and num1 > num3:\n",
+        "  print(\"El numero mayor es: \" ,num1)\n",
+        "elif  num2 > num1 and num2 > num3:\n",
+        "  print(\"El numero mayor es: \" ,num2)\n",
+        "else:\n",
+        "  print(\"El numero mayor es: \" ,num3)\n",
+        "if num1 < num2 and num1 < num3:\n",
+        "  print(\"El numero menor es: \" ,num1)\n",
+        "elif  num2 < num1 and num2 < num3:\n",
+        "  print(\"El numero menor es: \" ,num2)\n",
+        "else:\n",
+        "  print(\"El numero menor es: \" ,num3)\n",
+        "print (\"El promedio de los numeros es: \",prom,\"\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AEpo2emQ6PTq",
+        "outputId": "597e944a-20a4-44aa-df2b-6367286257f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "input 1° num: 8\n",
+            "input 2° num: 9\n",
+            "input 3° num: 3\n",
+            "El numero mayor es:  9\n",
+            "El numero menor es:  3\n",
+            "El promedio de los numeros es:  6.666666666666667 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1,num2,num3 = input(\"input 1°,2°,3° product with, separate: \").split(\",\")\n",
+        "print(\"El mayor es: \" + str(max(int(num1),int(num2),int(num3)))+\"\\nEl menor es: \" + str(min(int(num1),int(num2),int(num3)))) "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XnbcBGSA_fGn",
+        "outputId": "b441beda-f62b-4afc-d493-16ac311700db"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "input 1°,2°,3° product with, separate: 1,2,3\n",
+            "El mayor es: 3\n",
+            "El menor es: 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "pjH3DXZuAzLq"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
