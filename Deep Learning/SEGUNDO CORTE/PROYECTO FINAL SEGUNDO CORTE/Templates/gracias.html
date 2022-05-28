@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>clasificador de sentimientos para textos en español</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  </head>
+  <body style="background-color:#F7F7F7;">
+
+<h2><center><strong>Muchas gracias por su retroalimentación!</strong></center></h2>
+
+<div id='button'>
+	  <form action="/">
+	    <center><strong><input type=submit class="btn btn-success" value='Evaluar otro texto'></strong></center>
+	  </form>
+</div>
+<hr>
+<div id='sqliteReport'>
+	  	<form method=post action="/sqliteReport">
+      		 <center><input type=submit  class="btn btn-info" value='Reporte de clasificaciones de usuarios'></center>
+    	</form><br>
+    	 <center><img src="https://radcolombia.org/web/sites/default/files/archivos/instituciones/universidad-santo-tomas-tunja/logo-usta-tunja.png" width="800"
+     height="280"></center>
+</div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+  </body>
+</html>
