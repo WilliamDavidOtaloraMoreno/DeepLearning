@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>clasificador de sentimientos para textos en español</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  </head>
+  <body style="background-color:#F7F7F7;">
+    <div class="container-fluid">
+        <br><br>
+        <h2 text-center><center><strong>Resultados del clasificador de sentimientos (Positivos/Negativos) en español</strong></center></h2>
+        <h3><center>El modelo utilizado fue Machine Learning Classic (Regresión Logistica)</center></h3>
+        <hr>
+        <h3><center><strong>El Texto:</strong></center></h3>
+        <div><center>"{{ content }}"</center></div>
+
+        <h3><center><strong>Predicción:</strong></center></h3>
+        <div><center>El texto se clasificó como: <strong>{{ prediction }}</strong></center></div>
+        <hr>
+        <form action="/gracias" method="post">
+    	  	<center>¿La clasificación fue correcta?</center><br>
+    	  	<center><input type=submit value='Aprobado' name='feedback_button'></center>
+    	  	<input type=hidden value='{{ prediction }}' name='prediction'>
+    		<input type=hidden value='{{ content }}' name='texto'>
+    	</form>
+    	<br><center>De lo contrario seleccione la opción correcta del sentimiento:</center><br>
+    	<form action="/gracias" method="post">
+    		<center><input type=submit value='Sentimientos Positivos' name='feedback_button' style="background-color:green; border-color:green;"><br></center>
+    		<input type=hidden value='Positivo' name='prediction'>
+    		<input type=hidden value='{{ content }}' name='texto'>
+    	</form><br>
+    	<form action="/gracias" method="post">
+    		<center><input type=submit value='Sentimientos Negativos' name='feedback_button' style="background-color:red; border-color:red;"><br></center>
+    		<input type=hidden value='Negativo' name='prediction'>
+    		<input type=hidden value='{{ content }}' name='texto'>
+    	</form>
+
+        <hr>
+
+        <form action="/">
+           <center><input type=submit class="btn btn-primary" value='Evaluar otro texto'></center>
+        </form><br>
+
+        <center><img src="https://radcolombia.org/web/sites/default/files/archivos/instituciones/universidad-santo-tomas-tunja/logo-usta-tunja.png" width="800"
+     height="280"></center>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+</body>
+</html>
